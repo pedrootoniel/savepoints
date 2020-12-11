@@ -2,37 +2,60 @@ import styled from 'styled-components'
 import {shade} from 'polished'
 
 export const Container = styled.div`
+  display: flex;
   flex: 1;
-  background: var(--color-text);
+  background: #000;
   position: relative;
-`
-export const Header = styled.div`
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 20px 60px;
-    position: absolute;
-    z-index: 10;
-    justify-content: space-between;
-
-    i {
+  i {
       border-radius: 50%;
+      margin-top: 10px;
+      right: 20px;
       padding: 10px;
-      background: var(--color-background);
-      color: var(--color-text);
+      background: #FFF;
+      color: #000;
+      position: absolute;
+      z-index: 10;
       object-fit: cover;
       cursor: pointer;
       transition: 0.2s;
-
       :hover {
         background: ${shade(0.2, '#fff')}
       }
+      @media(max-width: 800px) {
+    i{
+      align-self: flex-end;
+      bottom: 0;
+      }
+    }
   }
 `
+
 export const ImgLogo = styled.img`
-  background: var(--color-background);
+  background: #FFF;
   padding: 3px;
+  margin: 10px 0 0 50px;
+  position: absolute;
+  z-index: 10;
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
+  @media(max-width: 800px) {
+    align-self: flex-start;
+    margin-left: 40px;
+  }
+`
+export const Img = styled.img`
+  width: 240px;
+`
+export const Title = styled.strong`
+  padding: 5px;
+`
+export const Description = styled.span``
+
+export const PopupInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
 `

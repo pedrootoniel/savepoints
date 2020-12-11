@@ -21,6 +21,14 @@ export default createGlobalStyle`
       --color-error: #F00;
     }
 
+    
+    body {
+      -webkit-font-smoothing: antialiased !important;
+    }
+    body html #root {
+      height: 100%100vh;
+    }
+
 	
 
 *, *:before, *:after {
