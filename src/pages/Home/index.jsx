@@ -8,14 +8,17 @@ function Home() {
 
   const [showSide, setShowSide] = useState(false)
 
-  return(
-      <Container>
-          <Maps setShowSide={setShowSide} showSide={showSide} />
-          {
-          showSide &&
-          <SideMenu />
-        }
-      </Container>
+  return (
+    <Container>
+      <Maps
+        setShowSide={setShowSide}
+        showSide={showSide}
+      />
+      {
+        showSide &&
+        <SideMenu />
+      }
+    </Container>
   )
 }
 
